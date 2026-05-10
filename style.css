@@ -73,3 +73,19 @@ footer {
         flex-direction: column;
     }
 }
+
+/* GAME CARDS HOVER */
+.game-card {
+    transition: 0.3s;
+}
+
+.game-card:hover {
+    transform: scale(1.03);
+    background-color: #f9f9f9;
+}
+
+/* TITLE games sivulle */
+.games h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
