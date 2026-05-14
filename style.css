@@ -1,15 +1,16 @@
 /* PERUS */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #eef2ff, #dbeafe);
     color: #222;
 }
 
 /* HEADER + NAV */
 header {
-    background-color: #ffffff;
-    padding: 10px;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    color: white;
+    padding: 15px;
 }
 
 nav {
@@ -27,8 +28,14 @@ nav {
 }
 
 .nav-links a {
-    color: #222;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #dbeafe;
+    cursor: pointer;
 }
 
 /* ETUSIVU */
@@ -36,6 +43,8 @@ nav {
     padding: 40px;
     text-align: center;
     background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* PELIT */
@@ -47,19 +56,31 @@ nav {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pelikortti {
     background-color: #ffffff;
     padding: 15px;
     width: 250px;
+    border-left: 5px solid #7c3aed;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pelikortti:hover {
+    transform: scale(1.03);
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #ffffff;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
+    color: white;
     margin-top: 20px;
 }
 
@@ -71,17 +92,13 @@ footer {
 
     .peli-osio {
         flex-direction: column;
+        align-items: center;
     }
-}
 
-/* PELI KORTIT */
-.pelikortti {
-    transition: 0.3s;
-}
-
-.pelikortti:hover {
-    transform: scale(1.03);
-    background-color: #f9f9f9;
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* TITLE pelit sivulle */
@@ -103,8 +120,16 @@ footer {
 
 .gallery-grid img {
     width: 100%;
-    height: auto;
+    height: 250px;
     border: 1px solid #ccc;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    border-color: #6a5acd;
 }
 
 @media (max-width: 600px) {
@@ -121,8 +146,12 @@ footer {
 form {
     display: flex;
     flex-direction: column;
+    background-color: white;
     max-width: 500px;
     margin: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 12px;
 }
 
 label {
@@ -134,17 +163,35 @@ textarea {
     padding: 10px;
     margin-top: 5px;
     border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 button {
     margin-top: 15px;
     padding: 10px;
     border: none;
-    background-color: #333;
+    background: linear-gradient(90deg, #7c3aed, #2563eb);
     color: white;
     cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 button:hover {
-    background-color: #555;
+    background: linear-gradient(90deg, #5a2cb8, #1e40af);
+}
+
+.active {
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    max-width: 1100px;
+    margin: 20px auto;
 }
