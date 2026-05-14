@@ -6,4 +6,53 @@
         <title>Yhteystiedot - Mun pelisivusto</title>
         <link rel="stylesheet" href="style.css">
     </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <h1>Mun pelisivusto</h1>
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Etusivu</a></li>
+                    <li><a href="games.html">Pelit</a></li>
+                    <li><a href="gallery.html">Galleria</a></li>
+                    <li><a href="contact.html">Yhteystiedot</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="etusivu">
+                <h2>Yhteystiedot</h2>
+                <p>Voit lähettää viestin tämän lomakkeen kautta!</p>
+            </section>
+
+            <section class="lomake">
+
+                <form>
+
+                    <label for="nimi">Nimi:</label>
+                    <input type="text" id="nimi" name="nimi">
+
+                    <label for="email">Sähköposti:</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="viesti">Viesti:</label>
+                    <textarea id="viesti" name="viesti" rows="5"></textarea>
+
+                    <button type="submit">Lähetä viesti</button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Mun pelisivusto. Kaikki oikeudet pidätetään.</p>
+        </footer>
+        
+    </body>
 </html>

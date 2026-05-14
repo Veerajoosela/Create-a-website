@@ -1,4 +1,4 @@
-/* PERUS TYYLI */
+/* PERUS */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -39,17 +39,17 @@ nav {
 }
 
 /* PELIT */
-.games {
+.pelit {
     padding: 20px;
 }
 
-.game-container {
+.peli-osio {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
 }
 
-.game-card {
+.pelikortti {
     background-color: #ffffff;
     padding: 15px;
     width: 250px;
@@ -69,23 +69,82 @@ footer {
         flex-direction: column;
     }
 
-    .game-container {
+    .peli-osio {
         flex-direction: column;
     }
 }
 
-/* GAME CARDS HOVER */
-.game-card {
+/* PELI KORTIT */
+.pelikortti {
     transition: 0.3s;
 }
 
-.game-card:hover {
+.pelikortti:hover {
     transform: scale(1.03);
     background-color: #f9f9f9;
 }
 
-/* TITLE games sivulle */
-.games h2 {
+/* TITLE pelit sivulle */
+.pelit h2 {
     text-align: center;
     margin-bottom: 20px;
+}
+
+/* GALLERIA */
+.gallery {
+    padding: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LOMAKE */
+.lomake {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
 }
